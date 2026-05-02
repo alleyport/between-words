@@ -12,11 +12,11 @@ export default function HomePage() {
       <section className="postcard-hero min-h-[100svh] px-6 py-8">
         <div className="mx-auto max-w-6xl">
           <article className="postcard-sheet relative mx-auto overflow-visible p-8 md:p-12">
-            <img src="/gold wax stamps.jpg" alt="wax stamp" className="token token-wax" />
-            <img src="/gold elements.jpg" alt="gold token" className="token token-gold-1" />
-            <img src="/gold elements.jpg" alt="gold token" className="token token-gold-2" />
-            <img src="/burgundy elements.jpg" alt="burgundy token" className="token token-burg-1" />
-            <img src="/burgundy elements.jpg" alt="burgundy token" className="token token-burg-2" />
+            <img src="/gold-wax-stamps.jpg" alt="gold wax seal collage" className="token token-wax" />
+            <img src="/gold-elements.jpg" alt="gold token" className="token token-gold-1" />
+            <img src="/gold-elements.jpg" alt="gold token" className="token token-gold-2" />
+            <img src="/burgundy-elements.jpg" alt="burgundy token" className="token token-burg-1" />
+            <img src="/burgundy-elements.jpg" alt="burgundy token" className="token token-burg-2" />
 
             <h1 className="text-center font-serif text-4xl tracking-[0.35em] text-[#3a261c] md:text-6xl">BETWEEN WORDS</h1>
             <p className="mx-auto mt-2 w-fit border-y border-[#6E1F1A]/50 px-6 py-1 text-xs uppercase tracking-[0.3em] text-[#5f6f4e]">Close readings of language, lyrics, and meaning</p>

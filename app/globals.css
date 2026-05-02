@@ -24,7 +24,7 @@ body::before {
 .font-serif { font-family: var(--font-serif), serif; }
 
 .postcard-hero {
-  background-image: linear-gradient(rgba(30,26,23,0.48), rgba(30,26,23,0.48)), url('/burgundy stars.jpg');
+  background-image: linear-gradient(rgba(30,26,23,0.48), rgba(30,26,23,0.48)), url('/burgundy-stars.jpg');
   background-size: cover;
   background-position: center;
 }
