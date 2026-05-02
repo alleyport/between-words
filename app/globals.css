@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body {
+  @apply text-[#3A261C];
+  background: #EFE4CF;
+  font-family: var(--font-serif), serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.16;
+  background-image: radial-gradient(rgba(58, 38, 28, 0.7) 0.45px, transparent 0.45px);
+  background-size: 3px 3px;
+}
+
+.font-script { font-family: var(--font-script), cursive; }
+.font-serif { font-family: var(--font-serif), serif; }
+
+.postcard-hero {
+  background-image: linear-gradient(rgba(30,26,23,0.48), rgba(30,26,23,0.48)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1900&q=80');
+  background-size: cover;
+  background-position: center;
+}
+
+.postcard-sheet {
+  background: #EFE4CF;
+  border: 1px solid rgba(169,137,103,0.7);
+  box-shadow: 0 22px 45px rgba(30,26,23,0.42);
+  clip-path: polygon(1% 2%, 98% 0%, 100% 6%, 99% 98%, 3% 100%, 0 95%, 0 5%);
+}
+
+.postcard-sheet::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: linear-gradient(120deg, transparent 42%, rgba(58,38,28,0.14) 52%, transparent 60%), radial-gradient(rgba(80,60,45,0.5) 0.45px, transparent 0.45px);
+  background-size: 100% 100%, 4px 4px;
+}
+
+.vintage-illustration-frame { border: 12px solid #D8C7A5; box-shadow: 0 14px 24px rgba(30,26,23,0.3); }
+
+.paper-panel {
+  position: relative;
+  background: #EFE4CF;
+  border: 1px solid rgba(169,137,103,0.7);
+  padding: 2rem;
+  box-shadow: 0 12px 22px rgba(30,26,23,0.2);
+}
+.paper-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.14;
+  background-image: radial-gradient(rgba(58,38,28,0.7) 0.45px, transparent 0.45px);
+  background-size: 3px 3px;
+}
+.tilt-a { transform: rotate(-0.5deg); }
+.tilt-b { transform: rotate(0.7deg); }
+
+.section-kicker { @apply mb-2 text-xs uppercase tracking-[0.2em] text-[#5F6F4E]; }
+.section-title { @apply mb-2 font-serif text-4xl text-[#1F2A17]; }
+.paper-link { @apply mt-4 inline-block text-[#6E1F1A] underline; }
+
+.reading-page { @apply mx-auto max-w-3xl px-6 py-14; }
+.reading-page h1 { @apply mb-4 font-serif text-5xl md:text-6xl text-[#3A261C]; }
+.reading-page p { @apply leading-8 text-[1.04rem] text-[#3A261C]/90; }
+
+.word-sheet-bg {
+  background: #EFE4CF;
+  background-image:
+    linear-gradient(145deg, rgba(95,111,78,0.06), transparent 35%),
+    linear-gradient(20deg, rgba(58,38,28,0.05), transparent 30%);
+}
+.word-sheet-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    radial-gradient(rgba(58, 38, 28, 0.75) 0.45px, transparent 0.45px),
+    linear-gradient(108deg, transparent 44%, rgba(58,38,28,0.1) 51%, transparent 58%);
+  background-size: 3px 3px, 100% 100%;
+}
