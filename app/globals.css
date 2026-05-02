@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body {
+  @apply bg-paper text-ink;
+  background-color: #f4eee4;
+  background-image:
+    radial-gradient(circle at 15% 15%, rgba(118, 85, 61, 0.08), transparent 35%),
+    radial-gradient(circle at 85% 5%, rgba(98, 120, 90, 0.08), transparent 30%),
+    radial-gradient(circle at 50% 70%, rgba(112, 70, 66, 0.06), transparent 45%);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: radial-gradient(rgba(49, 35, 24, 0.7) 0.45px, transparent 0.45px);
+  background-size: 3px 3px;
+}
+
+.font-script { font-family: var(--font-script), cursive; }
+.font-serif { font-family: var(--font-serif), serif; }
+
+.paper-grain { position: relative; }
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(76, 58, 43, 0.1) 0.6px, transparent 0.6px);
+  background-size: 4px 4px;
+  opacity: 0.2;
+}
+
+.reading-page {
+  @apply mx-auto max-w-3xl px-6 py-14;
+}
+.reading-page h1 { @apply mb-4 font-serif text-5xl md:text-6xl text-[#382819]; }
+.reading-page p { @apply leading-8 text-[1.04rem] text-ink/90; }
