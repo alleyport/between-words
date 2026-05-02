@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body {
+  @apply bg-paper text-ink;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(112, 70, 66, 0.08), transparent 38%),
+    radial-gradient(circle at 80% 0%, rgba(104, 119, 91, 0.08), transparent 35%),
+    linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3));
+}
+
+.paper-grain {
+  position: relative;
+}
+.paper-grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(62, 46, 31, 0.08) 0.5px, transparent 0.5px);
+  background-size: 3px 3px;
+  opacity: 0.25;
+}
