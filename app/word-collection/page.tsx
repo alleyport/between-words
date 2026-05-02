@@ -19,6 +19,7 @@ export default function Page() {
         const next = words[index + 1];
         return (
           <section key={word.slug} id={word.slug} className="word-sheet-bg relative isolate min-h-[100svh] overflow-hidden px-6 py-20">
+            <img src="/burgundy elements.jpg" alt="small burgundy token" className="absolute right-10 top-10 h-10 w-10 rotate-12 rounded-md opacity-70 shadow-md" />
             {starPositions.map((position, starIndex) => (
               <span key={starIndex} className={`pointer-events-none absolute select-none text-[#6E1F1A]/80 ${position}`}>★</span>
             ))}
