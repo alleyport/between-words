@@ -6,7 +6,10 @@ const starPositions = [
   "right-[8%] top-[20%] -rotate-6 text-[72px]",
   "left-[12%] bottom-[16%] rotate-[18deg] text-[60px]",
   "right-[15%] bottom-[11%] -rotate-[15deg] text-[52px]",
-  "left-[46%] top-[9%] rotate-[6deg] text-[32px]"
+  "left-[46%] top-[9%] rotate-[6deg] text-[32px]",
+  "left-[28%] top-[44%] -rotate-[10deg] text-[34px]",
+  "right-[26%] top-[58%] rotate-[11deg] text-[28px]",
+  "left-[62%] bottom-[18%] -rotate-[8deg] text-[36px]"
 ];
 
 export default function Page() {

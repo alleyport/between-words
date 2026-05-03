@@ -12,7 +12,7 @@ export default function HomePage() {
       <section className="postcard-hero min-h-[100svh] px-6 py-8">
         <div className="mx-auto max-w-6xl">
           <article className="postcard-sheet relative mx-auto overflow-visible p-8 md:p-12">
-            <img src="/gold-wax-stamps.jpg" alt="gold wax seal collage" className="token token-wax" />
+            <img src="/gold-wax-stamps.png" alt="gold wax seal collage" className="token token-wax" />
             <img src="/gold-elements.jpg" alt="gold token" className="token token-gold-1" />
             <img src="/gold-elements.jpg" alt="gold token" className="token token-gold-2" />
             <img src="/burgundy-elements.jpg" alt="burgundy token" className="token token-burg-1" />

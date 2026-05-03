@@ -100,3 +100,32 @@ body::before {
 .token-gold-2 { right: 20%; bottom: -24px; width: 96px; height: 78px; transform: rotate(8deg); }
 .token-burg-1 { left: 36%; top: -26px; width: 88px; height: 66px; transform: rotate(14deg); }
 .token-burg-2 { right: -20px; bottom: 30%; width: 74px; height: 74px; transform: rotate(-12deg); }
+
+
+.logo-wordmark {
+  font-family: var(--font-serif), serif;
+  font-size: 2.15rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-style: italic;
+  transform: none;
+  line-height: 1;
+}
+
+.lyric-page {
+  background-image: url('/red-polka-dot-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.lyric-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 18, 17, 0.48);
+}
+
+.lyric-slip {
+  background: #EFE4CF;
+  border: 1px solid rgba(169, 137, 103, 0.8);
+  box-shadow: 0 14px 24px rgba(15, 10, 8, 0.35);
+}
