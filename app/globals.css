@@ -124,8 +124,28 @@ body::before {
   background: rgba(30, 18, 17, 0.48);
 }
 
-.lyric-slip {
-  background: #EFE4CF;
-  border: 1px solid rgba(169, 137, 103, 0.8);
-  box-shadow: 0 14px 24px rgba(15, 10, 8, 0.35);
+
+
+.lyric-polaroid {
+  position: relative;
+  box-shadow: 0 16px 26px rgba(13, 8, 7, 0.42);
 }
+
+.lyric-polaroid-text {
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  bottom: 8%;
+  color: #3A261C;
+  text-align: left;
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+  font-size: 1.55rem;
+}
+
+.lyric-polaroid-text h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.15rem;
+}
+
+.lyric-polaroid-text p { margin: 0; }
