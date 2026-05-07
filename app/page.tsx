@@ -1,53 +1,51 @@
 import Link from "next/link";
-import { getCollection } from "@/lib/content";
+import { MonteCarlo, Reenie_Beanie } from "next/font/google";
+
+const titleFont = MonteCarlo({ subsets: ["latin"], weight: ["400"] });
+const handwrittenFont = Reenie_Beanie({ subsets: ["latin"], weight: ["400"] });
+
+const bottomStars = [
+  "left-[-6%] bottom-[-7%] w-[34vw] max-w-[420px] rotate-[-9deg] opacity-95",
+  "left-[18%] bottom-[-9%] w-[20vw] max-w-[245px] rotate-[7deg] opacity-85",
+  "left-1/2 bottom-[-10%] w-[28vw] max-w-[340px] -translate-x-1/2 rotate-[-2deg] opacity-95",
+  "right-[19%] bottom-[-8%] w-[18vw] max-w-[230px] rotate-[-12deg] opacity-80",
+  "right-[-5%] bottom-[-7%] w-[33vw] max-w-[410px] rotate-[10deg] opacity-95"
+];
 
 export default function HomePage() {
-  const essays = getCollection("essays");
-  const lyrics = getCollection("lyrics");
-  const words = getCollection("words");
-  const bookNotes = getCollection("book-notes");
-
   return (
-    <div>
-      <section className="postcard-hero min-h-[100svh] px-6 py-8">
-        <div className="mx-auto max-w-6xl">
-          <article className="postcard-sheet relative mx-auto overflow-visible p-8 md:p-12">
-            <img src="/gold-wax-stamps.png" alt="gold wax seal collage" className="token token-wax" />
-            <img src="/gold-elements.jpg" alt="gold token" className="token token-gold-1" />
-            <img src="/gold-elements.jpg" alt="gold token" className="token token-gold-2" />
-            <img src="/burgundy-elements.jpg" alt="burgundy token" className="token token-burg-1" />
-            <img src="/burgundy-elements.jpg" alt="burgundy token" className="token token-burg-2" />
+    <section className="home-landing relative h-[100svh] overflow-hidden bg-[#efe4cf] text-[#3A261C]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_36%,rgba(216,199,165,0.95),rgba(239,228,207,0.82)_42%,rgba(169,137,103,0.36)_100%)]" />
+      <div className="absolute inset-0 opacity-[0.16] [background-image:radial-gradient(rgba(58,38,28,0.65)_0.55px,transparent_0.55px)] [background-size:4px_4px]" />
 
-            <h1 className="text-center font-serif text-4xl tracking-[0.35em] text-[#3a261c] md:text-6xl">BETWEEN WORDS</h1>
-            <p className="mx-auto mt-2 w-fit border-y border-[#6E1F1A]/50 px-6 py-1 text-xs uppercase tracking-[0.3em] text-[#5f6f4e]">Close readings of language, lyrics, and meaning</p>
-            <div className="mt-4 text-center text-[#6E1F1A]/70">✶ · ✶ · ✶</div>
+      <img src="/images/home/decorative-star-1.png" alt="" className="absolute left-[9%] top-[14%] w-14 rotate-[-13deg] opacity-80 drop-shadow-[0_10px_16px_rgba(58,38,28,0.18)] sm:w-20" />
+      <img src="/images/home/decorative-star-2.png" alt="" className="absolute right-[12%] top-[18%] w-16 rotate-[11deg] opacity-75 drop-shadow-[0_10px_16px_rgba(58,38,28,0.18)] sm:w-24" />
+      <img src="/images/home/decorative-wax-stamp.png" alt="" className="absolute right-[18%] top-[58%] z-20 w-16 rotate-[-8deg] opacity-85 drop-shadow-[0_13px_18px_rgba(58,38,28,0.28)] sm:w-24" />
 
-            <div className="mt-10 grid gap-8 md:grid-cols-[1.05fr_1px_0.95fr]">
-              <div>
-                <div className="paper-panel rotate-[-1deg]">
-                  <div className="h-[320px] rounded-sm border border-[#A98967]/50 bg-[#D8C7A5]/55" />
-                </div>
-              </div>
-              <div className="hidden bg-[#a98967]/70 md:block" />
-              <div className="md:pt-8">
-                <p className="font-script text-5xl text-[#3a261c]">between words</p>
-                <p className="mt-4 max-w-md text-[1.05rem] leading-8 text-[#3a261c]">A personal literary archive of close reading, word histories, lyric interpretation, and marginal reflections.</p>
-                <div className="mt-6 space-y-2 text-sm uppercase tracking-[0.2em] text-[#5f6f4e]">
-                  <Link href="/about" className="block hover:text-[#6e1f1a]">About this notebook</Link>
-                  <Link href={`/essays/${essays[0].slug}`} className="block hover:text-[#6e1f1a]">Read featured essay</Link>
-                </div>
-              </div>
-            </div>
-          </article>
+      <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center px-6 pt-[7svh] text-center">
+        <h1 className={`${titleFont.className} text-[4.8rem] leading-none tracking-[0.015em] text-[#3A261C] drop-shadow-[0_4px_8px_rgba(239,228,207,0.3)] sm:text-[7rem] md:text-[8.8rem]`}>
+          between words
+        </h1>
+
+        <div className="relative mt-[-0.5rem] aspect-[1.45/1] w-[min(78vw,520px)] bg-[url('/images/home/center-art-rectangle.png')] bg-contain bg-center bg-no-repeat drop-shadow-[0_20px_32px_rgba(58,38,28,0.24)] sm:mt-[-1rem]">
+          <p className={`${handwrittenFont.className} absolute left-[18%] top-[29%] w-[64%] text-[1.8rem] leading-[1.12] tracking-[0.035em] text-[#3A261C] sm:text-[2.25rem] md:text-[2.55rem]`}>
+            close readings of language, lyrics, and meaning
+          </p>
         </div>
-      </section>
 
-      <section className="mx-auto max-w-6xl space-y-10 px-6 py-16">
-        <article className="paper-panel tilt-a"><p className="section-kicker">Featured Essay</p><h2 className="section-title">{essays[0].title}</h2><p>{essays[0].excerpt}</p><Link href={`/essays/${essays[0].slug}`} className="paper-link">Read essay</Link></article>
-        <article className="paper-panel tilt-b"><p className="section-kicker">Lyric Analysis</p><h2 className="section-title">{lyrics[0].title}</h2><p>{lyrics[0].excerpt}</p><Link href={`/lyric-analysis/${lyrics[0].slug}`} className="paper-link">Explore reading</Link></article>
-        <article className="paper-panel"><p className="section-kicker">Word Collection</p><h2 className="section-title">A notebook of words</h2><p>{words.slice(0,3).map((w) => w.title).join(" · ")}</p><Link href="/word-collection" className="paper-link">Browse word sheets</Link></article>
-        <article className="paper-panel tilt-a"><p className="section-kicker">Book Notes</p><h2 className="section-title">{bookNotes[0].title}</h2><p>{bookNotes[0].excerpt}</p><Link href={`/book-notes/${bookNotes[0].slug}`} className="paper-link">Open note</Link></article>
-      </section>
-    </div>
+        <nav className="mt-2 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs uppercase tracking-[0.22em] text-[#1F2A17] sm:mt-4">
+          <Link href="/essays" className="hover:text-[#6E1F1A]">Essays</Link>
+          <Link href="/lyric-analysis" className="hover:text-[#6E1F1A]">Lyrics</Link>
+          <Link href="/word-collection" className="hover:text-[#6E1F1A]">Words</Link>
+          <Link href="/book-notes" className="hover:text-[#6E1F1A]">Book Notes</Link>
+        </nav>
+      </div>
+
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-[30svh] overflow-visible" aria-hidden="true">
+        {bottomStars.map((position, index) => (
+          <img key={index} src="/images/home/bottom-stars.png" alt="" className={`absolute ${position}`} />
+        ))}
+      </div>
+    </section>
   );
 }

@@ -149,3 +149,12 @@ body::before {
 }
 
 .lyric-polaroid-text p { margin: 0; }
+
+body:has(.home-landing) header,
+body:has(.home-landing) footer {
+  display: none;
+}
+
+body:has(.home-landing) {
+  overflow: hidden;
+}

@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 
 export function StarField() {
   const pathname = usePathname();
-  if (pathname.startsWith("/lyric-analysis")) return null;
+  if (pathname === "/" || pathname.startsWith("/lyric-analysis")) return null;
 
   const stars = [
     "left-[5%] top-[8%] text-[20px] rotate-12",
