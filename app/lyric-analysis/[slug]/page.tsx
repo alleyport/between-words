@@ -1,0 +1,3 @@
+import { notFound } from "next/navigation";
+import { getBySlug } from "@/lib/content";
+export default function Page({ params }: { params: { slug: string } }) { const post = getBySlug("lyrics", params.slug); if (!post) return notFound(); return <article className="reading-page"><h1 className="mb-3 font-serif text-5xl">{post.title}</h1><p className="mb-8 text-sm uppercase tracking-[0.2em] text-burgundy">{post.date}</p><div className="whitespace-pre-line leading-8">{post.content}</div></article>; }
