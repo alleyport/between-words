@@ -27,7 +27,7 @@ export default function HomePage() {
           between words
         </h1>
 
-        <div className="absolute left-1/2 top-[38svh] aspect-[1.45/1] w-[clamp(320px,33vw,520px)] -translate-x-1/2 -translate-y-1/2 bg-[url('/images/home/center-art-rectangle.png')] bg-contain bg-center bg-no-repeat drop-shadow-[0_20px_32px_rgba(58,38,28,0.24)]">
+        <div className="absolute left-1/2 top-[38svh] aspect-[1.45/1] w-[clamp(960px,99vw,1560px)] -translate-x-1/2 -translate-y-1/2 bg-[url('/images/home/center-art-rectangle.png')] bg-contain bg-center bg-no-repeat drop-shadow-[0_20px_32px_rgba(58,38,28,0.24)]">
           <p className={`${handwrittenFont.className} absolute left-[17%] top-[31%] w-[66%] text-[clamp(2.4rem,3vw,3.8rem)] leading-[1.1] tracking-[0.035em] text-[#3A261C]`}>
             close readings of language, lyrics, and meaning
           </p>
