@@ -24,6 +24,13 @@ Use these files from `/public/images/home/`:
 
 - `decorative-wax-stamp.png`
   - Decorative accent element.
+ 
+- `home-page-bg.jpg`
+  - This is the full-page background image.
+  - It should cover the entire viewport.
+  - Use it as the actual page background.
+  - Do not tile it.
+  - Do not stretch it awkwardly.
 
 ## Fonts
 
@@ -58,3 +65,16 @@ Mobile:
 - Center rectangle fits within 90vw.
 - Bottom stars remain attached to the bottom.
 - No horizontal overflow.
+
+
+## Current problems to fix
+
+The current implementation has the wrong scale:
+- The title is too large and too high-dominant.
+- The central rectangle is too small.
+- The center text is too small and not visually integrated with the rectangle.
+- The stars are appearing as vertical side clusters instead of hugging the bottom.
+- The wax stamp is floating too randomly.
+- The page should feel like one composed poster, not scattered independent images.
+
+Use `home-page-bg.jpg` as the full-page background and rebuild the composition around it.
